@@ -1,8 +1,8 @@
 <?php echo $this->element('includes/top'); ?>
 
 			<div class="jumbotron">
-				<h1>Campaigns</h1>
-				<p>We'll list the active campaigns here.</p>
+				<h1><?php echo $title_for_layout; ?></h1>
+				<?php echo $this->fetch('content'); ?>
 			</div>
 
 <?php echo $this->element('includes/bottom'); ?>
