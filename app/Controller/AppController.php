@@ -46,4 +46,8 @@ class AppController extends Controller {
         $this->Auth->allow('index', 'view');
     }
 
+    public $theme = "Cakestrap";
+
 }
+
+
