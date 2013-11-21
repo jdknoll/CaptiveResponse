@@ -14,7 +14,7 @@ class CasAuthenticate {
         $this->_Collection = $collection;
 
         if(Configure::read('CAS.debug_log_enabled')){
-            phpCAS::setDebug(TMP . 'phpCas.log);
+            phpCAS::setDebug(TMP . 'phpCas.log');
         }
 
         phpCAS::client(CAS_VERSION_2_0,
@@ -24,6 +24,10 @@ class CasAuthenticate {
 	phpCAS::setNoCasServerValidation();
 
 //        phpCAS::setCasServerCACert(Configure::read('CAS.cert_path'));
+    }
+
+    public function unauthenticated(CakeRequest $request, CakeResponse $response) {
+        $this->authenticate($request, $response);
     }
 
     public function authenticate(CakeRequest $request, CakeResponse $response) {

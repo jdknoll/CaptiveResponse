@@ -43,7 +43,11 @@ class AppController extends Controller {
     );
 
     public function beforeFilter() {
-        $this->Auth->allow('index', 'view');
+        $this->Auth->authenticate = array(
+            AuthComponent::ALL => array('userModel' => 'Member'),
+            'Cas'
+        );
+        $this->Auth->allow('*');
     }
 
     public $theme = "Cakestrap";

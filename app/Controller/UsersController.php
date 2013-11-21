@@ -1,8 +1,9 @@
+<?php
 class UsersController extends AppController {
 
     public function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow('add');
+        $this->Auth->allow('logout');
     }
 
     public function index() {
@@ -59,12 +60,6 @@ class UsersController extends AppController {
         }
         $this->Session->setFlash(__('User was not deleted'));
         return $this->redirect(array('action' => 'index'));
-    }
-
-
-    public function beforeFilter() {
-        parent::beforeFilter();
-        $this->Auth->allow('add'); // Letting users register themselves
     }
 
     public function login() {
