@@ -383,6 +383,6 @@ Cache::config('_cake_model_', array(
 /**
  * CAS server coordinates
  */
-Configure::write('CAS.hostname', 'ip'); //CAS server IP address    
+Configure::write('CAS.hostname', 'your.cas.server'); //CAS server hostname    
 Configure::write('CAS.port', 443); 	//CAS server listening port    
-Configure::write('CAS.uri', 'service'); //CAS server service    
+Configure::write('CAS.uri', 'cas'); //CAS server service    
