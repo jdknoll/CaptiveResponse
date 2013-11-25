@@ -1,2 +1,1 @@
-<?php
-echo $return;
+<?php echo $return; ?>
