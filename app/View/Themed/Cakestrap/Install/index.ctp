@@ -1,0 +1,1 @@
+<?php echo 'The installation logic will go here.'; ?>
