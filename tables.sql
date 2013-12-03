@@ -20,7 +20,7 @@ CREATE TABLE `questions`(
 	`html` TEXT NOT NULL, 
 	`multiple_answers` BOOLEAN NOT NULL,
 	PRIMARY KEY (`id`),
-	FOREIGN KEY (`campaign_id`)	REFERENCES `campaigns` (`id`) ON UPDATE CASCADE ON DELETE CASCADE
+	FOREIGN KEY (`campaign_id`) REFERENCES `campaigns` (`id`) ON UPDATE CASCADE ON DELETE CASCADE
 ) ENGINE = InnoDB;
 
 
